@@ -35,15 +35,6 @@ const store = configureStore({
   }),
 });
 
-const aa = configureStore({
-  reducer: persistedReducer,
-  middleware: getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
-});
-
 export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof rootReducer>;
 
