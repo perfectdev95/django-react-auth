@@ -32,3 +32,4 @@ const authSlice = createSlice({
 });
 
 export default authSlice;
+export default readonly;
